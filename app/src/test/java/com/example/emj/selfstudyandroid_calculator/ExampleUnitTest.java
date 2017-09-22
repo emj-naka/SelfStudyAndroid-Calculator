@@ -12,6 +12,9 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        assertEquals(4, 2 + 2);
+        //assertEquals(4, 2 + 2);
+        MainActivity ma = new MainActivity();
+        double result = ma.calculate("1+2");
+        assertEquals(String.valueOf(result), "3.0");
     }
 }
