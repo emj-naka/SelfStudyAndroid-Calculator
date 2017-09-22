@@ -110,8 +110,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             result = 0.0;
             displayNumber = "";
         } else if (view.getTag().equals("=")) {
-            result = calculate(displayNumber);
-            resultTextView.setText(String.valueOf(result));
+            try {
+                result = calculate(displayNumber);
+                resultTextView.setText(String.valueOf(result));
+            } catch (Exception ex) {
+                resultTextView.setText("Error Occured!!");
+            }
         }
         formulaTextView.setText(displayNumber);
     }
